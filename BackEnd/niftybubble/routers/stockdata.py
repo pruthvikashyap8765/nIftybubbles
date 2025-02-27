@@ -4,11 +4,35 @@ import numpy as np
 import redis
 import json
 import time
+import os
 
-app = FastAPI()
 
-# Connect to Redis (Make sure Redis is running)
-redis_client = redis.Redis(host="localhost", port=6379, db=0, decode_responses=True)
+
+
+# Redis Cloud Credentials
+REDIS_HOST = "redis-11740.c301.ap-south-1-1.ec2.redns.redis-cloud.com"
+REDIS_PORT = 11740  
+REDIS_PASSWORD = "2aAjcmt84lVmNDGTN1wmo8bU3yYs9UfZ"
+# Connect to Redis Cloud
+redis_client = redis.Redis(
+    host=REDIS_HOST,
+    port=REDIS_PORT,
+    password=REDIS_PASSWORD,  # Redis Cloud requires authentication
+    decode_responses=True
+)
+
+# Test the connection
+try:
+    redis_client.ping()
+    print("Successfully connected to Redis Cloud!")
+except redis.ConnectionError as e:
+    print(f"Redis connection failed: {e}")
+
+
+
+
+
+
 
 router = APIRouter(
     prefix='/stocks',
