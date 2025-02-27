@@ -13,7 +13,6 @@ bcrypt==3.2.0
 beautifulsoup4==4.12.3
 bleach==6.2.0
 blinker==1.4
-certifi==2024.6.0  # Updated to latest
 cffi==1.17.1
 chardet==4.0.0
 charset-normalizer==3.4.0
