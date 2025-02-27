@@ -10,9 +10,14 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+# origins = [
+#     "http://localhost:5173",  
+# ]
+
 origins = [
     "https://niftybubbles.vercel.app/",  
 ]
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
