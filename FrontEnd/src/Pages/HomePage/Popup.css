@@ -1,0 +1,102 @@
+.stockInfo{
+    position: fixed;
+    padding-top: 16%;
+    width:30%;
+    height:60%;
+    background-color: #FFF2F2;
+    box-shadow: 20px 30px 50px rgba(0, 0, 0, 0.6);
+    padding: 2%;
+    border-radius: 20px;
+    transition: transform 0.5s ease;
+    z-index: 100000;
+    top: 20%;
+    left: 35%;
+    display: grid; 
+    align-items: center;
+    text-align: center;
+    color: #2D336B;
+    overflow: auto;
+}
+
+.showstockinfo{
+    transform-origin: 50% 50%;
+    transform: scale(1);
+}
+  
+.hidestockinfo{
+    transform-origin: 50% 50%;
+    transform: scale(0);
+
+}
+
+
+
+
+.close{
+    position: fixed;
+    right:5% ;
+    top:0;
+    color: #2D336B;
+    margin: 0;
+    padding: 0;
+    font-size: 2vw;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    &:hover{
+      transform: scale(1.1);
+    }
+}
+
+h2{
+    font-size: 2.5vw;
+    
+}
+
+
+.pt{
+    font-size: 1vw;
+}
+
+
+
+.popaddbtn{
+    border-radius: 50%;
+    font-size: 1.5vw;
+    background-color: #2D336B;
+    color: #FFF2F2;
+    padding: 0.5vh 0.9vw;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: transform 0.2s ease;
+    margin-left: 5%;
+    position: absolute;
+    top: 1vw;
+    left: 0;
+    &:hover {
+        background-color: rgb(120, 198, 2);
+        transform: scale(1.1);
+    }
+}
+
+
+
+.popfavadded{
+    background-color: #2D336B;
+    border-radius: 50%;
+    font-size: 1.2vw;
+    color: #FFF2F2;
+    padding: 0.9vh 0.8vw;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: transform 0.2s ease;
+    margin-left: 5%;
+    position: absolute;
+    top: 1vw;
+    left: 0;
+    &:hover {
+        background-color: rgb(239, 23, 23);
+        transform: scale(1.1);
+    }
+}

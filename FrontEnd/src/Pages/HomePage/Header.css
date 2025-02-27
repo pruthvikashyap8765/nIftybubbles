@@ -1,0 +1,135 @@
+.header{
+    background-color: #2D336B;
+    margin: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+.title{
+    margin: 0;
+    color: #FFF2F2;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+
+
+
+
+.searchbar {
+    background-color: #FFF2F2;
+    padding: 0.5em 0.5em 0.5em 2em;
+    border: 0;
+    border-radius: 5px;
+    font-size: 1rem;
+    width:100%;
+}    
+
+.searchbar:focus{
+    color: #2D336B;
+}
+
+.input{
+    flex-basis: 30%;
+    margin-left: 30%;
+    padding: 0  ;
+    display: grid; 
+    align-items: center;
+    position: relative;
+}
+
+.input i{
+    position: absolute;
+    left: 2%;
+    color: #A9B5DF;
+}
+
+.dropdown{
+    display: grid; 
+    align-items: center;
+}
+
+
+
+.header button:hover {
+    background-color: #ded0d0;
+}
+
+
+.d1{
+    margin-left: 45vw;
+}
+.d1 h1{
+    font-size: 1.8vw;
+}
+.d11{
+    color:#2D336B;
+    height: 50vh;
+    overflow: auto;
+    font-size: 1.2vw;
+}
+
+
+
+
+
+.totablebtn{
+    background-color: #FFF2F2;
+    color: #2D336B;
+    border: none;
+    padding: 0.5em  0.8em;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 1em
+}
+
+.settingsbtn{
+    background-color: #FFF2F2;
+    color: #2D336B;
+    border: none;
+    padding: 0.5em  0.8em;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 1em
+}
+
+
+
+.dp{
+    background-color: #2D336B;
+    border: 0px;
+    &:hover{
+        background-color: #2D336B !important;
+    }
+}
+
+
+.dropdown-menu{
+    padding: 20% 30% ;
+    font-size: 1.2vw;
+    background-color: #FFF2F2;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.lgn{
+    
+    text-decoration: none;
+    color: #2D336B;
+}
+
+.d21 span{
+    color:#2D336B ;
+
+}
+
+
+.selectedbtn{
+    background-color: rgb(120, 198, 2);
+}

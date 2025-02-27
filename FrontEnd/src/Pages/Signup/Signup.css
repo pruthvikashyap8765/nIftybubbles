@@ -1,0 +1,189 @@
+body{
+    background-color:#FFF2F2
+}
+
+
+.signup{
+    text-align: center;
+    padding: 5%;
+    margin: 0;
+}
+
+
+.signupbtn{
+    margin-top: 10px;
+    margin-left: 35%;
+    width: 30%;
+    padding: 10px;
+    background-color: #2D336B;
+    color: #FFF2F2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+}
+
+.signupbtn:hover {
+    transform: scale(1.1);
+}
+
+
+.c1{
+    padding: 5% 37%;
+}
+
+
+.gp{
+    background-color: #FFF2F2;
+    border: 0;
+    color: #2D336B;
+    text-decoration: none;
+    padding: 0;
+}
+.gp:hover {
+    text-decoration: underline;
+}
+
+
+.pbtn{
+    position: absolute;
+    right: 4%;
+    top: 35%;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+.pbtn:hover{
+    transform: scale(1.3);
+}
+
+
+
+
+
+
+
+
+
+
+.passwordgenerator{
+    text-align: center;
+    margin: 0;
+    color: #FFF2F2;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:-100%;
+    left: 0;
+    padding: 0;
+    z-index: 1000;
+}
+
+.showpasswordgenerator{
+    top: 0;
+}
+
+
+
+.c3{
+    width:30%;
+    position: relative;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%); /* Changes the axis of this div */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    background-color: #101543;
+    border-radius: 3%;
+    padding: 2% 5%;
+    overflow-y: auto; /* Makes the content scrollable if it overflows */
+}
+
+.close{
+    position: fixed;
+    right:5% ;
+    top:0;
+    color: #FFF2F2;
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+
+  
+
+.pfield{
+    margin: 5% 0 10% 0 ;
+}
+.cbtn{
+    padding: 0;
+    font-size: 2.5rem;
+    color: #2D336B;
+    position: absolute;
+    right: 2%;
+    top: -40%;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.cbtn:hover{
+    transform: scale(1.1);
+}
+
+
+.plength{
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between; /* will make the two parts go left and right */
+}
+.plength input{
+    width: 15%;
+}
+.pglabel{
+    color: #FFF2F2;
+    font-size: 1.1rem;
+
+    display: grid; /*to make the text align vertically*/
+    align-items: center;
+}
+
+.inpn{
+    background-color:white;
+    border: 0;
+    border-radius: 5px;
+}
+
+.inpc{
+    cursor: pointer;
+    accent-color:white;
+    height: 15px;
+    display: grid; /*to make the text align vertically*/
+    align-items: center;
+
+}
+
+
+
+.gpbtn{
+    font-size: 1.2rem;
+    margin-top: 8%;
+    margin-left: 10%;
+    width: 80%;
+    padding: 10px;
+    background-color: #FFF2F2;
+    color: #2D336B;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+}
+
+.gpbtn:hover {
+    transform: scale(1.1);
+}
+
+

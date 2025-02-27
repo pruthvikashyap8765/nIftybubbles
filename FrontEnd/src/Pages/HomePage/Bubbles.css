@@ -1,0 +1,33 @@
+.tabs{
+    padding: 0 5%;
+}
+
+.tabbtn{
+    padding: 0.2em 1em;
+    border-radius: 0 0 10px 10px;
+    border: 0;
+    background-color: #FFF2F2;
+    box-shadow: 0 1px 2px rgb(0,0,0, 0.4);
+    transform-origin: 50% 0%;
+    transition: transform 0.3s ease;
+    margin: 0 0.2em;
+    color: #2D336B ;
+}
+
+.tabbtn:hover{
+    transform: scale(1.1);
+}
+
+.tabbtnslct{
+    transform: scale(1.2);
+}
+
+.canvs{
+    display: none;
+}
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+BackEnd/env
+BackEnd/niftybubble/__pycache__
+BackEnd/niftybubble/repository/__pycache__
+BackEnd/niftybubble/routers/__pycache__
+
+
+FrontEnd/node_modules
+
+.DS_Store
