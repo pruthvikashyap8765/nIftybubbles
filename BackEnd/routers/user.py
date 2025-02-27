@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, status
-from .. import schemas
+import schemas
 from sqlalchemy.orm import Session
-from ..database import get_db
+from database import get_db
 from typing import List
-from ..repository import user
-from ..oauth2 import get_current_user
+from repository import user
+from oauth2 import get_current_user
 
 
 

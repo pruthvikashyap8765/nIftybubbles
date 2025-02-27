@@ -1,7 +1,7 @@
 from fastapi import Depends, HTTPException, status
 from typing import Annotated
 from fastapi.security import OAuth2PasswordBearer
-from . import token
+import token_utils
 
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login") #This is the route where the dastapi will fetch the token
@@ -16,6 +16,6 @@ def get_current_user(Token: Annotated[str, Depends(oauth2_scheme)]):
 
 
 
-    return token.verify_token(Token, credentials_exception)
+    return token_utils.verify_token(Token, credentials_exception)
 
 

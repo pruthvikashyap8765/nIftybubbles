@@ -1,8 +1,7 @@
 BackEnd/env
-BackEnd/niftybubble/__pycache__
-BackEnd/niftybubble/repository/__pycache__
-BackEnd/niftybubble/routers/__pycache__
-BackEnd/dump.rdb
+BackEnd/__pycache__
+BackEnd/repository/__pycache__
+BackEnd/routers/__pycache__
 
 
 FrontEnd/node_modules

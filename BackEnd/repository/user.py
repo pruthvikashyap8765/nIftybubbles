@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Session
-from .. import models, schemas
+import models, schemas
 from fastapi import HTTPException, status
-from ..hashing import Hash
-from ..models import User, Favorites
+from hashing import Hash
+from models import User, Favorites
 
 
 

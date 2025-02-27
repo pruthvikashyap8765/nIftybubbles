@@ -12,7 +12,7 @@ ALGORITHM = "HS256"
 from datetime import datetime, timedelta, timezone
 import jwt
 from jwt.exceptions import InvalidTokenError
-from . import schemas
+import schemas
 
 
 

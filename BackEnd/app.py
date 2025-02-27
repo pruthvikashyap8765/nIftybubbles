@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from . import models
-from .database import engine
-from .routers import user, authentication, stockdata
+import models
+from database import engine
+from routers import user, authentication, stockdata
 from fastapi.middleware.cors import CORSMiddleware
 
 
@@ -10,13 +10,13 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-# origins = [
-#     "http://localhost:5173",  
-# ]
-
 origins = [
-    "https://niftybubbles.vercel.app/",  
+    "http://localhost:5173",  
 ]
+
+# origins = [
+#     "https://niftybubbles.vercel.app/",  
+# ]
 
 app.add_middleware(
     CORSMiddleware,
