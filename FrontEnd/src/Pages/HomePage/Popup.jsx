@@ -551,7 +551,7 @@ const Popup = ({favorites, setFavorites, add_fav, del_fav}) => {
     useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://13.61.33.80/stocks');
+        const response = await fetch('https://shapes-cooperative-nervous-medicare.trycloudflare.com/stocks');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }

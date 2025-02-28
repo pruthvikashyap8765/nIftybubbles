@@ -65,7 +65,7 @@ export default function HomePage() {
       console.log(userId)
         if (userId === 0) return; // Don't fetch if not logged in
         try {
-            const response = await api.get(`https://13.61.33.80/user/favorites/${userId}`, {
+            const response = await api.get(`https://shapes-cooperative-nervous-medicare.trycloudflare.com/user/favorites/${userId}`, {
                 headers: {
                     'Content-Type': 'application/json',
                     Authorization: `Bearer ${sessionStorage.getItem('token')}`,
