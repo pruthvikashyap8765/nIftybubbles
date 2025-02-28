@@ -551,7 +551,7 @@ const Popup = ({favorites, setFavorites, add_fav, del_fav}) => {
     useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://13.60.248.99/stocks');
+        const response = await fetch('https://13.61.33.80/stocks');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
