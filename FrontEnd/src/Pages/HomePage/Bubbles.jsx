@@ -166,44 +166,72 @@ const BubbleCanvas = ({data, timeline, showinfo, setShowinfo, favorites, showfav
     let newBalls = [];
 
     let t;
-    let t_;
+    let minRadius = window.innerHeight / 25;
+    let maxRadius = window.innerHeight / 6; 
+    let minValue;
+    let maxValue;
 
+
+    let values_hourly = data.map(item => { return Math.abs(item.hourly_change) })
+    let values_daily = data.map(item => { return Math.abs(item.daily_change) })
+    let values_weekly = data.map(item => { return Math.abs(item.weekly_change) })
+    let values_monthly = data.map(item => { return Math.abs(item.monthly_change) })
+    let values_yearly = data.map(item => { return Math.abs(item.yearly_change) })
+    let values_market = data.map(item => { return Math.abs(item.market_cap) })
     
 
       if(showfav){
         for (let i = 0; i < favBalls; i++) {
 
+
+
           let comp = data.find(item => item.name === favorites[i])
+
+          
 
 
           switch(timeline){
             case "0":
+
+              minValue = Math.min(...values_hourly)
+              maxValue = Math.max(...values_hourly)
+
               t= comp.hourly_change
-              t_ = t*(window.innerHeight/4);
               break;
             case "1":
+
+              minValue = Math.min(...values_daily)
+              maxValue = Math.max(...values_daily)
+
               t = comp.daily_change
-              t_ = t*(window.innerHeight / 15);
               break;
             case "2":
+              minValue = Math.min(...values_weekly)
+              maxValue = Math.max(...values_weekly)
+
               t = comp.weekly_change
-              t_ = t*(window.innerHeight / 35);
               break;
             case "3":
+              minValue = Math.min(...values_monthly)
+              maxValue = Math.max(...values_monthly)
+
               t = comp.monthly_change
-              t_ = t*(window.innerHeight / 90);
               break; 
             case "4":
+              minValue = Math.min(...values_yearly)
+              maxValue = Math.max(...values_yearly)
+
               t = comp.yearly_change
-              t_ = t*(window.innerHeight / 230);
               break;   
             case "5":
+              minValue = Math.min(...values_market)
+              maxValue = Math.max(...values_market)
+
               t = comp.market_cap
-              t_ = t*(window.innerHeight / 60000000000000);
               break;
           }
     
-          let radius = Math.min(Math.max(window.innerHeight / 20, Math.abs(t_)),window.innerHeight/2);
+          let radius = minRadius + ((Math.abs(t) - minValue) / (maxValue - minValue)) * (maxRadius - minRadius);
           let x = Math.random() * (canvas.width - radius * 3) + 1.7 * radius;
           let y = Math.random() * (canvas.height - radius * 3) + 1.7 * radius;
           let dx = (Math.random() - 0.5) * 0.2;
@@ -213,38 +241,53 @@ const BubbleCanvas = ({data, timeline, showinfo, setShowinfo, favorites, showfav
           let text2 = comp.name;
           newBalls.push(new Ball(x, y, radius, dx, dy, color, text1, text2));
         }
+
       }
       else{
+
         for (let i = 0; i < numBalls; i++) {
 
           switch(timeline){
             case "0":
+              minValue = Math.min(...values_hourly)
+              maxValue = Math.max(...values_hourly)
+
+
               t= data[i].hourly_change
-              t_ = t*(window.innerHeight/4);
               break;
             case "1":
+              minValue = Math.min(...values_daily)
+              maxValue = Math.max(...values_daily)
+
               t = data[i].daily_change
-              t_ = t*(window.innerHeight / 15);
               break;
             case "2":
+              minValue = Math.min(...values_weekly)
+              maxValue = Math.max(...values_weekly)
+
               t = data[i].weekly_change
-              t_ = t*(window.innerHeight / 35);
               break;
             case "3":
+              minValue = Math.min(...values_monthly)
+              maxValue = Math.max(...values_monthly)
+
               t = data[i].monthly_change
-              t_ = t*(window.innerHeight / 90);
               break; 
             case "4":
+              minValue = Math.min(...values_yearly)
+              maxValue = Math.max(...values_yearly)
+
               t = data[i].yearly_change
-              t_ = t*(window.innerHeight / 230);
               break;   
             case "5":
+              minValue = Math.min(...values_market)
+              maxValue = Math.max(...values_market)
+
               t = data[i].market_cap
-              t_ = t*(window.innerHeight / 60000000000000);
               break;
           }
     
-          let radius = Math.min(Math.max(window.innerHeight / 20, Math.abs(t_)),window.innerHeight/2);
+          let radius = minRadius + ((Math.abs(t) - minValue) / (maxValue - minValue)) * (maxRadius - minRadius);
           let x = Math.random() * (canvas.width - radius * 3) + 1.7 * radius;
           let y = Math.random() * (canvas.height - radius * 3) + 1.7 * radius;
           let dx = (Math.random() - 0.5) * 0.2;
@@ -254,6 +297,8 @@ const BubbleCanvas = ({data, timeline, showinfo, setShowinfo, favorites, showfav
           let text2 = data[i].name;
           newBalls.push(new Ball(x, y, radius, dx, dy, color, text1, text2));
         }
+
+        
       }
       
 
